@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>电影展示</title>
@@ -8,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
 </head>
 
-<body>
+<body ng-app='moviecat'>
     <!-- 顶部导航栏开始 -->
     <div class="top">
         <div class="header">
@@ -32,116 +31,17 @@
 
 
     <div class="container">
-        
+        <div ng-view></div>
         <!-- 首页开始 -->
-        <div class="list">
-            <!-- 首页就是一张图片 -->
-            <img src="assets/img/home_page.png" alt="">
-        </div>
+        <!--<div class="list">-->
+            <!--&lt;!&ndash; 首页就是一张图片 &ndash;&gt;-->
+            <!--<img src="assets/img/home_page.png" alt="">-->
+        <!--</div>-->
         <!-- 首页结束 -->
 
         <!--电影列表开始-->
-        <div class="list">
-            <ul>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/sc.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>乾隆秘史</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>古装</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/sc.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>乾隆秘史</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>古装</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/sc.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>乾隆秘史</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>古装</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/sc.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>乾隆秘史</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>古装</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/sc.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>乾隆秘史</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>古装</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/details">
-                        <img src="assets/img/aizaishenqiu.jpg" alt="">
-                    </a>
-                    <div class="meta">
-                        <h4><span>爱在深秋</span> <em>9.9分</em></h4>
-                        <div class="otherinfo">类型:<span>爱情</span></div>
-                    </div>
-                </li>
-            </ul>
-            <div class="paging">
-                <label>总共：0条记录,第0/0页;</label>
-                <!-- 加上disable类样式，表示按钮禁用状态 -->
-                <button class="prev disable ">上一页</button>
-                <button class="next">下一页</button>
-            </div>
-        </div>
         <!--电影列表结束-->
+
 
         <!-- 电影详情开始 -->
         <div class="detail">
@@ -176,10 +76,15 @@
             <p>版权所有&copy; 前端与移动开发学院 前端(允许侵权)</p>
         </div>
     </footer>
-
     <!-- 自动补全C3样式的前缀 -->
     <script src="assets/js/prefixfree.min.js"></script>
+    <script src='../node_modules/angular.min.js'></script>
+    <script src='../node_modules/angular-route.min.js'></script>
     <script src="app.js"></script>
+    <script src='home/module.js'></script>
+    <script src='in_theaters/module.js'></script>
+    <script src='coming_soon/module.js'></script>
+    <script src='top250/module.js'></script>
 </body>
 
 </html>
