@@ -2,5 +2,5 @@
     // "use strict";
     // start your ride
     angular.module('moviecat',
-        ['moviecat.home','moviecat.in_theaters','moviecat.coming_soon','moviecat.top250']);
+        ['moviecat.home','inThetherJson','moviecat.in_theaters_new','moviecat.coming_soon','moviecat.top250']);
 })(angular);
